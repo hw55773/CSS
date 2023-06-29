@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性选择器</title>
+  <style>
+    .demo a{
+      float:left ;
+      display: block;
+      height: 50px;
+      width: 50px;
+      border-radius: 10px;
+      background: #d129ff;
+      text-align: center;
+      color: aqua;
+      text-decoration: none;
+      margin-right: 5px;
+      font: bold 20px/50px Arial;
+    }
+    /*属性名，属性名=属性值（正则）*/
+    /*
+    = 是绝对等于
+    *= 是包含
+    ^= 开头
+    $= 结尾
+    */
+    /*存在id属性的元素
+    a[]{}
+    */
+  /*  a[id]{
+      background: yellow;
+    }*/
+  /*  a[id="wh"]{
+      background: yellow;
+    }*/
+/*class中有wen的元素*/
+ /*   a[class*="wen"]{
+      background: yellow;
+    }*/
+/*选择herf中以http开头的元素*/
+ /*   a[href^="http"]{
+      background: yellow;
+    }*/
+a[href$=pdf]{
+  background: yellow;
+}
+
+  </style>
+</head>
+<body>
+<p class="demo">
+  <a href="https://baidu.com" class="wen hao wh2002" id="wh">1</a>
+  <a href="" class="wen hao wh2002" target="_blank" title="test">2</a>
+  <a href="images/123.html" class="hao wh2002">3</a>
+  <a href="images/123.png" class="hao wh2002">4</a>
+  <a href="images/123.jpg" class="hao wh2002">5</a>
+  <a href="abc" class="hao wh2002">6</a>
+  <a href="/a.pdf" class="hao wh2002">7</a>
+  <a href="/abc.pdf" class="hao wh2002">8</a>
+  <a href="abc.doc" class="hao wh2002">9</a>
+  <a href="abcd.doc" class="hao wh2002 last">10</a>
+</p>
+</body>
+</html>
